@@ -48,7 +48,7 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + env(safe-a
 @media (min-width:900px){:root{--header-h:78px}}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:var(--step-0);line-height:1.65;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1140px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:clamp(16px,4vw,24px)}
 h1,h2,h3{font-family:var(--font-head);line-height:1.2;text-wrap:balance;margin:0;font-weight:600}
 p{margin:0}
 a{color:inherit}
@@ -86,7 +86,7 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 @media (max-width:899px){
   .top-row .tabs{display:none}
   .tabs-row{display:block;border-top:1px solid var(--line)}
-  .tabs-row .tabs{overflow-x:auto;scrollbar-width:none;padding-block:4px;margin-inline:calc(-1 * clamp(16px,4vw,40px));padding-inline:clamp(10px,3vw,34px)}
+  .tabs-row .tabs{overflow-x:auto;scrollbar-width:none;padding-block:4px;margin-inline:calc(-1 * clamp(16px,4vw,24px));padding-inline:clamp(10px,3vw,18px)}
   .tabs-row .tabs::-webkit-scrollbar{display:none}
 }
 @media (max-width:599px){.top-actions .btn{display:none}}
