@@ -268,6 +268,23 @@ details[open]::details-content {
   height: auto;
   opacity: 1;
 }
+
+/* Serviços: animação ao passar o mouse */
+.card{position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease}
+.card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.card .ico{transition:background-color .35s ease,color .35s ease,transform .45s cubic-bezier(.2,.7,.2,1)}
+.card h3{transition:color .35s ease}
+@media (hover:hover){
+  .card:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--gold) 55%,var(--line));box-shadow:0 18px 36px -18px rgba(31,36,51,.35)}
+  .card:hover::after{transform:scaleX(1)}
+  .card:hover .ico{background:var(--navy);color:var(--gold);transform:scale(1.08) rotate(-4deg)}
+  .card:hover h3{color:var(--gold-deep)}
+}
+@media (prefers-reduced-motion: reduce){
+  .card,.card::after,.card .ico{transition:none}
+  .card:hover{transform:none}
+  .card:hover .ico{transform:none}
+}
 </style>
 </head>
 <body>
