@@ -285,6 +285,20 @@ details[open]::details-content {
   .card:hover{transform:none}
   .card:hover .ico{transform:none}
 }
+
+@media (min-width: 678px) and (max-width: 1140px) {
+    :root { --header-h: 140px; } /* compensa o topo mais alto ao clicar nas abas */
+
+    .top-row {
+        flex-wrap: wrap;
+    }
+
+    nav.tabs {
+        order: 3;
+        width: 100%;
+        place-content: center;
+    }
+}
 </style>
 </head>
 <body>
