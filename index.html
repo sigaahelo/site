@@ -299,6 +299,20 @@ details[open]::details-content {
         place-content: center;
     }
 }
+
+section#contato .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+}
+
+section#contato .contact-grid .c-item {
+    padding: 24px;
+    border: unset !important;
+}
+
+section#contato .contact-grid .c-item:nth-child(odd) {
+    border-right: 1px solid color-mix(in srgb, var(--gold) 35%, transparent) !important;
+}
 </style>
 </head>
 <body>
