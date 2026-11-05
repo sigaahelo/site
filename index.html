@@ -323,9 +323,13 @@ section#contato .contact-grid .c-item:nth-child(odd) {
 
 /* Advogados parceiros */
 .partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1000px;margin:0 auto}
-.partner{position:relative;display:grid;gap:10px;align-content:start;padding:32px 30px 28px;background:var(--bg);border:1px solid var(--line);border-radius:6px;text-decoration:none;color:inherit;min-width:0;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease}
+.partner{position:relative;display:grid;gap:10px;align-content:start;padding:0 30px 28px;background:var(--bg);border:1px solid var(--line);border-radius:6px;text-decoration:none;color:inherit;min-width:0;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease}
 .partner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
-.p-mono{width:58px;height:58px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--font-head);font-weight:600;letter-spacing:.06em;margin-bottom:6px}
+.p-photo{position:relative;display:block;margin:0 -30px 4px;aspect-ratio:16/11;background:var(--navy);overflow:hidden}
+.p-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.p-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(to bottom,transparent,var(--bg) 92%);pointer-events:none}
+.p-initials{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-head);font-weight:600;font-size:2.4rem;letter-spacing:.08em;color:var(--gold)}
+@media (hover:hover){.partner:hover .p-photo img{transform:scale(1.04)}}
 .p-area{font-family:var(--font-head);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
 .partner h3{font-size:1.25rem}
 .p-oab{font-size:var(--step--1);color:var(--muted)}
@@ -495,7 +499,7 @@ section#contato .contact-grid .c-item:nth-child(odd) {
       </div>
       <div class="partners">
         <a class="partner" href="https://www.danielferreira.adv.br/" target="_blank" rel="noopener">
-          <span class="p-mono" aria-hidden="true">DF</span>
+          <span class="p-photo"><span class="p-initials" aria-hidden="true">DF</span><img src="https://www.danielferreira.adv.br/assets/daniel-sobre.jpg?v=32" alt="Dr. Daniel Ferreira de Oliveira" loading="lazy" decoding="async" onerror="this.remove()"></span>
           <span class="p-area">Direito do Trabalho</span>
           <h3>Dr. Daniel Ferreira de Oliveira</h3>
           <span class="p-oab">OAB/SP 425.156</span>
@@ -504,7 +508,7 @@ section#contato .contact-grid .c-item:nth-child(odd) {
           <span class="p-link">Visitar o site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
         </a>
         <a class="partner" href="https://godoyadvocacia.adv.br/" target="_blank" rel="noopener">
-          <span class="p-mono" aria-hidden="true">RG</span>
+          <span class="p-photo"><span class="p-initials" aria-hidden="true">RG</span><img src="https://godoyadvocacia.adv.br/foto.jpg" alt="Dr. Ricardo Godoy Tavares Pinto" loading="lazy" decoding="async" onerror="this.remove()"></span>
           <span class="p-area">Direito Civil e Imobiliário</span>
           <h3>Dr. Ricardo Godoy Tavares Pinto</h3>
           <span class="p-oab">OAB/SP 233.389</span>
